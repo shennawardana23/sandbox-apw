@@ -50,7 +50,8 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: Deploy
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
@@ -58,10 +59,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          path: ./docs/.vitepress/dist
-
+          path:  ./docs/.vitepress/dist
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        id: deployment
+        uses: actions/deploy-pages@v4
