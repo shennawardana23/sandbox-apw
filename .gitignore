@@ -1,0 +1,35 @@
+### Custom ###
+# VitePress build output & cache directory
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/node
